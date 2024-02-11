@@ -4,8 +4,8 @@ import notebook.controller.UserController;
 import notebook.model.User;
 import notebook.util.Commands;
 import notebook.util.UserDataValidator;
-import notebook.util.UserValidator;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -74,9 +74,9 @@ public class UserView {
         String phone = prompt("Номер телефона: ");
         phone =dataValidator.validate(phone);
 
-//        UserValidator validator = new UserValidator();
+
         return new User(firstName, lastName, phone);
-//        return validator.validate(new User(firstName, lastName, phone));
+
     }
     private User updateUserData(){
         String firstName = prompt("Имя: ");

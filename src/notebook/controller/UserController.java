@@ -40,4 +40,8 @@ public class UserController {
     public void deleteUser(long id) {
         repository.delete(id);
     }
+
+    public void saveAll(List<String> data) {
+        repository.saveAll(data);
+    }
 }
